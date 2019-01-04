@@ -52,8 +52,8 @@
             <h4>well-balanced heart</h4>
         </div>
         <div class="amount">
-            <p><span class="text">访问量</span><span class="access">1000</span></p>
-            <p><span class="text">日志</span><span class="daily-record">1000</span></p>
+            <p><span class="text">访问量</span><span class="access"> {{$number}}</span></p>
+            <p><span class="text">日志</span><span class="daily-record"> {{$viewNum}}</span></p>
         </div>
     </div>
 </div>

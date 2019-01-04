@@ -9,7 +9,9 @@ class IndexController extends Controller
         //base_path()    "/data/www/project-laravel-blog"
         //app_path()    "/data/www/project-laravel-blog/app"
 //        dd(base_path());
-        return view('index');
-        dd(666535356);
+        return view('index', [
+            'viewNum' => 57,
+            'number' => 102,
+        ]);
     }
 }
