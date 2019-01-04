@@ -6,6 +6,10 @@ class IndexController extends Controller
 {
     public function index()
     {
-        dd(8989986666);
+        //base_path()    "/data/www/project-laravel-blog"
+        //app_path()    "/data/www/project-laravel-blog/app"
+//        dd(base_path());
+        return view('index');
+        dd(666535356);
     }
 }
