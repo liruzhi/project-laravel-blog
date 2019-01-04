@@ -32,6 +32,23 @@ return [
     */
 
     'connections' => [
+        'mysql_tob'       => [
+            'write'     => [
+                'host' => env('DB_HOST_WRITE', '106.13.36.201')
+            ],
+            'read'      => [
+                'host' => explode(',', env('DB_HOST_READ', '106.13.36.201'))
+            ],
+            'driver'    => 'mysql',
+            'database'  => env('DB_DATABASE_TOB', 'laravel_blog'),
+            'username'  => env('DB_USERNAME', 'root'),
+            'password'  => env('DB_PASSWORD', 'root'),
+            'charset'   => 'utf8mb4',
+            'collation' => 'utf8mb4_general_ci',
+            'prefix'    => '',
+            'strict'    => false,
+            'engine'    => null
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',
