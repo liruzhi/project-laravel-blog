@@ -32,13 +32,14 @@ return [
     */
 
     'connections' => [
-        'mysql_tob'       => [
-            'write'     => [
-                'host' => env('DB_HOST_WRITE', '106.13.36.201')
-            ],
-            'read'      => [
-                'host' => explode(',', env('DB_HOST_READ', '106.13.36.201'))
-            ],
+        'laravel_blog'       => [
+//            'write'     => [
+//                'host' => env('DB_HOST_WRITE', '106.13.36.201')
+//            ],
+//            'read'      => [
+//                'host' => explode(',', env('DB_HOST_READ', '106.13.36.201'))
+//            ],
+            'host' => env('DB_HOST_WRITE', '106.13.36.201'),
             'driver'    => 'mysql',
             'database'  => env('DB_DATABASE_TOB', 'laravel_blog'),
             'username'  => env('DB_USERNAME', 'root'),
@@ -87,7 +88,6 @@ return [
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '1433'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),

@@ -52,8 +52,10 @@
             <h4>well-balanced heart</h4>
         </div>
         <div class="amount">
-            <p><span class="text">访问量</span><span class="access"> {{$number}}</span></p>
-            <p><span class="text">日志</span><span class="daily-record"> {{$viewNum}}</span></p>
+            <p><span class="text">您的ip</span><span class="access"> {{$ip}}</span></p>
+            <p><span class="text">您访问了</span><span class="access"> {{$viewNum}}次</span></p>
+            <p><span class="text">总访问量</span><span class="access"> {{$totalViewNum}}次</span></p>
+            {{--<p><span class="text">日志</span><span class="daily-record"> {{$viewNum}}个</span></p>--}}
         </div>
     </div>
 </div>
