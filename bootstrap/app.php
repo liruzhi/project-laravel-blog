@@ -1,5 +1,7 @@
 <?php
 
+// 设置应用名
+define("APP_NAME", "laravel-blog");
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -40,6 +42,12 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
+
+$app->configureMonologUsing(function ($monolog) {
+    $monolog->pushHandler(
+        new \Monolog\Handler\RotatingFileHandler('/var/cache/nginx/webcache/storage/'.APP_NAME.'/logs/.log', 30)
+    );
+});
 
 /*
 |--------------------------------------------------------------------------
